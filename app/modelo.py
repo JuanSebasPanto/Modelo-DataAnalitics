@@ -12,6 +12,7 @@ Variable objetivo (y):
 
 Este módulo lo usan tanto la app (app.py) como cualquier notebook.
 """
+import os
 import re
 import numpy as np
 import pandas as pd
@@ -22,7 +23,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV, StratifiedKF
 from sklearn.tree import DecisionTreeClassifier
 
 SEMILLA = 42
-RUTA_CSV = "data/plane_crashes_data.csv"
+RUTA_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "plane_crashes_data.csv")
 
 # ----------------------------------------------------------------------
 # 1. LIMPIEZA E INGENIERÍA DE VARIABLES
